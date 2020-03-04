@@ -1,8 +1,13 @@
-function requestData(aURL){
+//refreshes the page to reload the table
+function removeTable(){
+	window.location.reload(true);
+}
+//this uses ajax to request a json document from the webpage
+function getdata(aURL){
 	console.log("Getting " + aURL);
 	$.ajax({
 	crossOrigin: false,
-	//dataType: 'json',
+	//dataType: 'text',
 	url: aURL,
 	type: 'GET'
 	}).done(function(data){tableformat(data)
@@ -19,9 +24,9 @@ function tableformat(jsonData){
 	}
 	else
 	{
-		var parsedJson = JSON.parse(jsonData);
+		var drink_data = jsonData.drinks;
 		var columns = [];
-			$.each(parsedJson[0], function(key,value){
+			$.each(drink_data[1], function(key,value){
 			var records = {};
 			records.title = key;
 			records.data = key;
@@ -32,7 +37,7 @@ function tableformat(jsonData){
 		console.log(columns);
 		$(document).ready(function(){
 			table = $('#outtable').DataTable({
-				data: parsedJson,
+				data: drink_data,
 				"columns": columns
 			});
 		});
