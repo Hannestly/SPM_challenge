@@ -10,6 +10,7 @@
   <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
   <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
   <link href="style.css" rel="stylesheet" type="text/css">
+  <script src="./js/searchRandom.js"></script>
   <div class="title">
     
 </head>
@@ -52,6 +53,11 @@
   <center>
     <table id="outtable" class="display" cellspacing="0" width="100%"></table>
   </center>
+  
+  <div>
+    <button type="button" id = "Random">Random!</button>
+    <img id="random" src="" style="display:none;"/>
+  </div>
 
   <script type="text/javascript">
     function callpage(i)
