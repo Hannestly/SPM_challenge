@@ -5,12 +5,11 @@
   <meta charset="utf-8">
   <title>Food Distribution Center</title>
   <!-- Bootstrap core CSS -->
+  <script src="./APICall.js"></script>
   <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
   <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
   <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
-  <link href="index.css" rel="stylesheet" type="text/css">
-  <script src="./js/yale.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css">
   <div class="title">
     <center>
       <h1>Search Our Database!<h1>
@@ -18,13 +17,22 @@
   </div>
 </head>
 <body>
-  <h4> What would you like to search for?</h4>
+  <h5>Want to view a specific cocktail? Enter its name: </h5>
+  <input type="text" id="name">
+  <button onclick="callpage(1)">Search</button><br></P>
+  <center>
+    <table id="outtable" class="display" cellspacing="0" width="100%"></table>
+  </center>
 
-  <h5>Want to view items of a certain color?</h5>
-  Enter color (Ex. Orange): <input type="text" id="color">
-  <button onclick="callpage(3)">Search</button><br></P>
-
-  <p id="test">
-  </p>
+  <script type="text/javascript">
+    function callpage(i)
+     {
+      if (i == 1) {
+        var name = document.getElementById('name').value;
+        var url = 'https://www.thecocktaildb.com/api/json/v1/1/search.php?s=' + name;
+      getdata(url);
+    }
+  }
+  </script>
 
 </body>
