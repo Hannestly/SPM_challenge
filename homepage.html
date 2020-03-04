@@ -12,19 +12,39 @@
   <link href="index.css" rel="stylesheet" type="text/css">
   <script src="./js/yale.js"></script>
   <div class="title">
-    <center>
-      <h1>Search Our Database!<h1>
-    </center>
-  </div>
+    
 </head>
-<body>
-  <h4> What would you like to search for?</h4>
+<body class="text-center">
 
-  <h5>Want to view items of a certain color?</h5>
-  Enter color (Ex. Orange): <input type="text" id="color">
-  <button onclick="callpage(3)">Search</button><br></P>
+  <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+    <header class="masthead mb-auto">
+      <div class="inner">
+        <h3 class="masthead-brand">Cover</h3>
+        <nav class="nav nav-masthead justify-content-center">
+          <a class="nav-link active" href="#">Home</a>
+          <a class="nav-link" href="#">Features</a>
+          <a class="nav-link" href="#">Contact</a>
+        </nav>
+      </div>
+    </header>
 
-  <p id="test">
-  </p>
+    <main role="main" class="inner cover">
+      <h1 class="cover-heading">Search Our Database!</h1>
+      <p class="lead">What would you like to search for?</p>
+      <p class="lead">
+        <a href="#" class="btn btn-lg btn-secondary">Learn more</a>
+      </p>
+      <p id="test">
+        <input type="text" id="search_term">
+        <input type="button" id="test_button">
+      </p>
+    </main>
+
+    <footer class="mastfoot mt-auto">
+      <div class="inner">
+        <p>Cocktail Search by Group 7</p>
+      </div>
+    </footer>
+  </div>
 
 </body>
