@@ -1,0 +1,40 @@
+function requestData(aURL){
+	console.log("Getting " + aURL);
+	$.ajax({
+	crossOrigin: false,
+	//dataType: 'json',
+	url: aURL,
+	type: 'GET'
+	}).done(function(data){tableformat(data)
+	})
+}
+
+function tableformat(jsonData){
+	console.log(jsonData);
+	//if the array length is 4, aka empty array, it alerts that there is no data
+	if(jsonData.length == 4)
+	{
+		alert("Sorry, there is no data for that. Try again!");
+		removeTable();
+	}
+	else
+	{
+		var parsedJson = JSON.parse(jsonData);
+		var columns = [];
+			$.each(parsedJson[0], function(key,value){
+			var records = {};
+			records.title = key;
+			records.data = key;
+			columns.push(records);
+			console.log("key: "+ key + " value: "+ value);
+		});
+			//creates a table using Datatables
+		console.log(columns);
+		$(document).ready(function(){
+			table = $('#outtable').DataTable({
+				data: parsedJson,
+				"columns": columns
+			});
+		});
+	}
+}
