@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Search by Ingredient Name</title>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="js/SearchIngredientByName.js"></script>
+</head>
+<body>
+
+<form onsubmit="return false">
+    <label for="searchIngName">Lookup Ingredient</label>
+    <input type="text" id="searchIngName">
+    <button id='searchButton' onclick="lookupIngredient()">Search</button>
+</form>
+<div id="response"></div>
+
+
+</body>
+</html>

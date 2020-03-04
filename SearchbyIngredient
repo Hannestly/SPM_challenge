@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Food Distribution Center</title>
+  <!-- Bootstrap core CSS -->
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+  <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+  <link href="https://cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" rel="stylesheet">
+  <script src="./vidit.js"></script>
+  <link href="style.css" rel="stylesheet" type="text/css">
+  <div class="title">
+    <center>
+      <h1>Search Our Database!<h1>
+    </center>
+  </div>
+</head>
+<body>
+  
+  <h5>Search by Ingredient</h5>
+  Enter ingredient (Ex. alcohol): <input type="text" id="color">
+  <button id = "Vodka">Search</button><br></P>
+  
+  <p id="test">
+  </p>
+  
+
+</body
